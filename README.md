@@ -14,7 +14,7 @@ The above link is activity of fishing effort from specifically Chinese ships in 
 
 This particular species is hard to track since they live very short lives and getting an accurate population count is difficult due to that. However, based on what I have been able to observe thus far I feel the stocks estimated maximum sustainable yield is inaccurate and needs updating. Many fisheries depend on reported data from fisherman in order to be able to estimate what the population looks like, but China has a habit of not sharing information with other states despite having advanced technology to share fisheries information between fleet members in order to maximize productivity. I want to use the satellite data to estimate the catch rate of these ships and combine it with data from sources who do share their information in order to get a more accurate rate of consumption. In terms of migratory patterns, I would like to illustrate with a mapping tool where they have been going and where they are likely to go next. I have reason to believe they are going to start moving into other economic exclusive zones, such as those belonging to Russia and the US. Here is where I would like to create a predictive model, to show what the future holds should business continue as usual.
 
-image
+![image](https://user-images.githubusercontent.com/61677632/119078280-e532b900-b9c3-11eb-9b4d-65b6ac181106.png)
 
 4/8/2021 I have started looking into different modeling strategies after receiving some positive feedback from Noam Ross in regards to project.
 
@@ -110,11 +110,16 @@ As for the mapping, I am going to try reaching out to other sources in order to 
 
 I have completed gathering data files for 2015-2020 of Chinese fishing vessels using squid jigging equipment. fish-r-man-main.zip
 
-image
+![image](https://user-images.githubusercontent.com/61677632/119078348-ff6c9700-b9c3-11eb-83d4-9666f257db22.png)
+
 
 Now that I have it saved to my computer I was able to run some analysis on the data itself in terms of total fishing hours.
 
 2015-2016 data pic 2016-2017 data pic
+
+![image](https://user-images.githubusercontent.com/61677632/119078372-0f847680-b9c4-11eb-8893-9d1922510ba5.png)
+![image](https://user-images.githubusercontent.com/61677632/119078380-14492a80-b9c4-11eb-939b-76df77858f49.png)
+
 
 As you can see from my example, Chinese squid jiggers (at least those with AIS) have fished, during 2015, for a total of 443167.7 hours, with a mean of 0.7182412 hours. The respective measurements in hours (meaning the vessel transiting, loading/unloading, and other operations that are not fishing in themselves) are “Total: 1479917 hours” and “Mean: 2.398498 hours”.
 
@@ -130,11 +135,14 @@ Year 2019 Fishing hours 753955.8
 
 2017 575223.7
 
-I have been running into some issues finding exact numbers for annual catch rates over the last 5 years. I keep finding rough estimations over time. I am hoping that if I cannot find exact numbers that this information will be enough. The issue I am running into is since the late 90s the catch rate has remained relatively the same, only in the last three years have I found a reported jump in annual catch rates. The time spent fishing for China alone has increased by 100k hours each year. It does support the theory that although fishing effort has increased, the annual catch seems to remain pretty constant which is an indicator that the population is declining faster than it can replace itself. Picture2
+I have been running into some issues finding exact numbers for annual catch rates over the last 5 years. I keep finding rough estimations over time. I am hoping that if I cannot find exact numbers that this information will be enough. The issue I am running into is since the late 90s the catch rate has remained relatively the same, only in the last three years have I found a reported jump in annual catch rates. The time spent fishing for China alone has increased by 100k hours each year. It does support the theory that although fishing effort has increased, the annual catch seems to remain pretty constant which is an indicator that the population is declining faster than it can replace itself. 
+
+![image](https://user-images.githubusercontent.com/61677632/119078422-2925be00-b9c4-11eb-8176-2c7b5d377787.png)
+
 
 I also was able to create an updated species range map since the one I had created for my presentation was a bit cut off and I wanted to make sure I had it for illustration purposes come my next presentation.
 
-map
+![image](https://user-images.githubusercontent.com/61677632/119078437-304ccc00-b9c4-11eb-8c9a-b4b341e4720a.png)
 
 I am looking into accessing the data provided for me from a source by instatlling a program called FishStatJ that FAO uses to share their fishing data so that is exciting.
 
@@ -142,19 +150,26 @@ I am looking into accessing the data provided for me from a source by instatllin
 
 Got the FishStatJ software up and running. I was able to narrow the data down into Cephalopods that China harvested:
 
-squid catch
+![image](https://user-images.githubusercontent.com/61677632/119078451-3a6eca80-b9c4-11eb-8f7e-800e16d9f00d.png)
 
 The only downside to that is as you can see only up until 2018 is reported, not 2018 or 2019.
 
-squid catch and fishing effort
+![image](https://user-images.githubusercontent.com/61677632/119078474-45c1f600-b9c4-11eb-90de-5e62467f754c.png)
 
 I have been working to create the visuals I need. These are the most recent years of fishing activity, and it is very obvious Chinas fishing activity is steadily creeping towards the US/Canada
 
 2019 fishing activity 2020 fishing activity april 2021 fishing activity
 
+![image](https://user-images.githubusercontent.com/61677632/119078505-52dee500-b9c4-11eb-8dfc-3f93f4ce6b9c.png)
+![image](https://user-images.githubusercontent.com/61677632/119078514-57a39900-b9c4-11eb-9e57-afbdaafc0038.png)
+
+![image](https://user-images.githubusercontent.com/61677632/119078528-5e321080-b9c4-11eb-81d3-1b19ffedec98.png)
+
 The above images are 2019, 2020, and 2021 from top to bottom. They are captured during the warm mid year months, and the 2021 frame specifically was the activity tracked in early April 2021.
 
-april 2021 map
+
+![image](https://user-images.githubusercontent.com/61677632/119078576-786bee80-b9c4-11eb-8c97-94015305ef2c.png)
+
 
 This is the temp map for April 2021 and this activity is happening in the temperature gradient that is in this animals distribution range.
 
@@ -168,6 +183,9 @@ A MODEL HAS BEEN BORN...sorta
 
 In theory it works but in order for this to create a more accurate idea of MSY and also a more accurate model of the future I need more points.
 
+![image](https://user-images.githubusercontent.com/61677632/119078610-8752a100-b9c4-11eb-853b-915f9b85e0ec.png)
+
+
 image
 
 Above is the theory of more effort = less catch over time in mathematical terms. At least I have math and a trendline to go with what I am saying, But I am going to need all of the years of data for this to be more effective.
@@ -180,17 +198,18 @@ I DID IIIIIIIIIIT
 
 So here is my forecast for the next 5 years
 
-Squid Catch Forecast
+![image](https://user-images.githubusercontent.com/61677632/119078640-946f9000-b9c4-11eb-94df-dbb28604c956.png)
 
-Forecast data
+![image](https://user-images.githubusercontent.com/61677632/119078654-9b969e00-b9c4-11eb-983f-6302f57689bc.png)
 
-Usimg excels forecasting tool this is the forecast of how much annual catch China will receive in the next 5 years based on previous catch data.
+Using excels forecasting tool this is the forecast of how much annual catch China will receive in the next 5 years based on previous catch data.
 
 I also have another forecast in regards to fishing effort
 
-updated fishing effort vs year
+![image](https://user-images.githubusercontent.com/61677632/119078672-a5b89c80-b9c4-11eb-8f95-8c30a59be115.png)
 
-Forecast data fishing hours show
+![image](https://user-images.githubusercontent.com/61677632/119078683-ad784100-b9c4-11eb-9011-1c8d3a9c5fdb.png)
+
 
 I decided to compare the results of this forecast to actual data I had to show how accurate this forecast is.
 
@@ -198,7 +217,7 @@ Shown above are the forecasted values for 2019 and 2020. The actual values of ef
 
 Currently exploring effort cost vs catch rate. So the market rate for this species is between $500 and $1000 per metric ton.
 
-cpu vs total catch THE GOOD ONE
+![image](https://user-images.githubusercontent.com/61677632/119078714-bb2dc680-b9c4-11eb-899b-a86e919c137e.png)
 
 The only other issue I am running into is the volume of catch. The original estimation of total catch has been retracted from https://www.mcsuk.org/goodfishguide/fish/784#:~:text=Stock%20information-,The%20Japanese%20flying%20squid%20fishery%20is%20one%20of%20the%20most,to%20500%2C000%20t%20per%20year.
 
@@ -214,15 +233,18 @@ The total catch was worth $41,854,000. This means ships made roughly $59.75 an h
 
 5/6/2021
 
-2019 temp map joined 2020 temp map joined 2021 temp map joined
+![image](https://user-images.githubusercontent.com/61677632/119078745-caad0f80-b9c4-11eb-86ec-3f02411d10c3.png)
+![image](https://user-images.githubusercontent.com/61677632/119078761-d3054a80-b9c4-11eb-8596-f79c56bbb37c.png)
+![image](https://user-images.githubusercontent.com/61677632/119078775-d993c200-b9c4-11eb-8872-f1eb728de7cd.png)
+
 
 Above are my completed maps for the last few years showing a trend in shift of warming seas and steady movement East towards the USA.
 
-image
+![image](https://user-images.githubusercontent.com/61677632/119078784-de587600-b9c4-11eb-85fd-a63ae3e5c485.png)
+![image](https://user-images.githubusercontent.com/61677632/119078806-e6b0b100-b9c4-11eb-913f-4485046abe1d.png)
+![image](https://user-images.githubusercontent.com/61677632/119078831-f29c7300-b9c4-11eb-8c55-abab2c604c62.png)
 
-image
 
-image
 
 Above are the data snapshots I took from the FAO database of a few different countries regional to the Japanese Flying Squid. Even the Russian Federation who takes very little still reports the specific species "Japanese Flying Squid".
 
